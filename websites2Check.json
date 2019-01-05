@@ -1,0 +1,24 @@
+{
+	"websites2Check": [
+		{
+			"name": "google",
+			"url":  "https://www.google.com/"
+		},
+		{
+			"name": "fake",
+			"url":  "https://somethingNotExisting.com/"
+		},
+		{
+			"name": "azure",
+			"url":  "https://azure.microsoft.com/en-us/"
+		},
+		{
+			"name": "reddit",
+			"url":  "https://www.reddit.com/"
+		},
+		{
+			"name": "denmark",
+			"url":  "https://denmark.dk/"
+		}		
+	]
+}
