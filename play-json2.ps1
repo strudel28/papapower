@@ -1,10 +1,16 @@
-﻿Set-StrictMode -Version Latest
-
-$path = Get-Location
-$inputfile = "$path\websites2Check.json"
+﻿$path = Get-Location
+$inputfile = "websites2Check.json"
 
 #Json processing
-$sitesJson = Get-Content $inputfile | Out-String	
+Try
+    {
+    $sitesJson = Get-Content "$path\$inputfile" -ErrorAction Stop | Out-String 
+    }
+Catch
+    {
+    Write-Output "$path\$inputfile is not found. `nPlease, put $inputfile into the script folder: $path."
+    }
+
 $sitesObject = ConvertFrom-Json –InputObject $sitesJson
 
 $ok = "is reachable"
