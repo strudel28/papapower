@@ -16,18 +16,17 @@ Catch
     }
 
 
-
 $ok = "is reachable"
 $fail = "is unreachable"
 
-# For loop - review!
+# For loop to process each member of the array
 For ( $i=0; $i -lt $sitesObject.websites2Check.Length; $i++)
 {
 
 $name = $sitesObject.websites2Check[$i].name
 $url = $sitesObject.websites2Check[$i].url
 
-# Web request processing - review!
+# Web request processing
 $HTTP_Request = [System.Net.WebRequest]::Create($url)
 
 Try
