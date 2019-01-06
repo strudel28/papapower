@@ -8,13 +8,14 @@ $inputfile = "websites2Check.json"
 Try
     {
     $sitesJson = Get-Content "$path\$inputfile" -ErrorAction Stop | Out-String
+    $sitesObject = ConvertFrom-Json –InputObject $sitesJson
     }
 Catch 
     {
     Write-Output "$path\$inputfile is not found. `nPlease, put $inputfile into the script folder: $path."
     }
 
-$sitesObject = ConvertFrom-Json –InputObject $sitesJson
+
 
 $ok = "is reachable"
 $fail = "is unreachable"
